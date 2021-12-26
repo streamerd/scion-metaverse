@@ -1,0 +1,58 @@
+{
+    "name": "phaser-starter",
+    "version": "0.0.1",
+    "description": "A Phaser.io starter for Game Jams",
+    "scripts": {
+        "start": "npm run watch",
+        "build": "cross-env NODE_ENV=production webpack",
+        "watch": "webpack serve --open",
+        "check-format": "prettier --list-different --ignore-path .gitignore .",
+        "format": "prettier --ignore-path .gitignore --write .",
+        "lint": "eslint --ignore-path .gitignore --ext .js,.jsx .",
+        "validate": "npm run check-format && npm run lint",
+        "pre-commit": "lint-staged",
+        "preversion": "npm run validate",
+        "postversion": "git push && git push --tags",
+        "prepare": "husky install"
+    },
+    "author": "Christopher Geary <hello@crgeary.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/core": "7.16.5",
+        "@babel/preset-env": "7.16.5",
+        "@crgeary/configuration-prettier": "1.0.3",
+        "babel-loader": "8.2.3",
+        "clean-webpack-plugin": "3.0.0",
+        "cross-env": "7.0.3",
+        "css-loader": "5.2.7",
+        "eslint": "7.32.0",
+        "eslint-config-prettier": "8.3.0",
+        "html-webpack-plugin": "5.5.0",
+        "husky": "6.0.0",
+        "lint-staged": "10.5.4",
+        "prettier": "2.5.1",
+        "style-loader": "2.0.0",
+        "webpack": "5.65.0",
+        "webpack-cli": "4.9.1",
+        "webpack-dev-server": "3.11.3"
+    },
+    "dependencies": {
+        "phaser": "3.55.2"
+    },
+    "prettier": "@crgeary/configuration-prettier",
+    "lint-staged": {
+        "**/*.+(js|jsx)": [
+            "eslint"
+        ],
+        "**/*.+(js|jsx|json)": [
+            "prettier --write"
+        ]
+    },
+    "browserslist": [
+        "defaults",
+        "not < 0.5%",
+        "not IE 11",
+        "not OperaMini all",
+        "not Safari 5.1"
+    ]
+}

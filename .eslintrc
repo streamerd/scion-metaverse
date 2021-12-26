@@ -1,0 +1,15 @@
+{
+    "extends": ["eslint:recommended", "prettier"],
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "globals": {
+        "GAME_NAME": "readonly",
+        "GAME_VERSION": "readonly"
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2021
+    }
+}
