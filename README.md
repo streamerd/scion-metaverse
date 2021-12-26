@@ -1,15 +1,10 @@
-# Phaser Starter
+# Scion Metaverse Phaser Codebase
+Built upon [Phaser](https://phaser.io/) starter for Game .
 
-A [Phaser](https://phaser.io/) starter for Game Jams
-
-## Features
-
--   Modern JavaScript with Webpack & Babel
--   ESLint & Prettier
--   Automatic deployments to Itch
+## Contributing
+We love Discord and love Twitter. Let's keep conversations on either of these platforms for ideation, then submit Github issues to manage the overall feature growth and roadmap.
 
 ## Usage
-
 There are a number of available scripts, but the most useful are:
 
 -   `npm start` - Start a development server
@@ -18,7 +13,6 @@ There are a number of available scripts, but the most useful are:
 For a full list use: `npm run`
 
 ## Itch Deployments
-
 A [workflow](./.github/workflows/deploy.yml) is included to automatically deploy the dist directory to an Itch game. By default, this will only run when a new GIT tag is detected matching the `v*` format, but can be easily customised should you want to change this.
 
 Deployments are handled by [Butler](https://itch.io/docs/butler/) and require 3 secret keys to be setup within your project.
@@ -30,5 +24,4 @@ Deployments are handled by [Butler](https://itch.io/docs/butler/) and require 3 
 Games are automatically applied a `web` channel. Please see the [Butler documentation](https://itch.io/docs/butler/) for required information about deploying browser playable games.
 
 ## Licence
-
 [MIT](./LICENSE)
